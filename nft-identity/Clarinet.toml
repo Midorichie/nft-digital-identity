@@ -1,0 +1,40 @@
+[project]
+name = "digital-identity"
+description = "A digital identity NFT smart contract"
+authors = ["Midori Chie <midorichie@example.com>"]
+telemetry = false
+cache_dir = "./.cache"
+
+[contracts]
+digital-identity = { path = "contracts/digital-identity.clar" }
+
+[repl]
+costs_version = 2
+plugin_cache_size = 512
+
+[network]
+name = "devnet"
+deployment_fee_rate = 1
+
+[accounts.deployer]
+mnemonic = "your twelve word seed phrase here"
+balance = 100_000_000_000_000
+
+[accounts.wallet_1]
+mnemonic = "another twelve word seed phrase"
+balance = 100_000_000_000
+
+[accounts.wallet_2]
+mnemonic = "yet another twelve word seed phrase"
+balance = 100_000_000_000
+
+[environments]
+development = [
+    { name = "local", network_id = "devnet", deployment_fee_rate = 1 }
+]
+testnet = [
+    { name = "testnet", network_id = "testnet", deployment_fee_rate = 1 }
+]
+mainnet = [
+    { name = "mainnet", network_id = "mainnet", deployment_fee_rate = 1 }
+]
