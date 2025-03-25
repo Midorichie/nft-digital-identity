@@ -1,12 +1,13 @@
 [project]
 name = "digital-identity"
-description = "A digital identity NFT smart contract"
+description = "Digital Identity NFT and Verification System"
 authors = ["Midori Chie <midorichie@example.com>"]
 telemetry = false
 cache_dir = "./.cache"
 
 [contracts]
 digital-identity = { path = "contracts/digital-identity.clar" }
+identity-verification = { path = "contracts/identity-verification.clar" }
 
 [repl]
 costs_version = 2
@@ -17,7 +18,7 @@ name = "devnet"
 deployment_fee_rate = 1
 
 [accounts.deployer]
-mnemonic = "your twelve word seed phrase here"
+mnemonic = "replace with your twelve word seed phrase"
 balance = 100_000_000_000_000
 
 [accounts.wallet_1]
